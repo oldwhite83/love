@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="baidu-site-verification" content="AAxaXuMxjf" />
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: digital-7_mono.ttf format("truetype");
+		}
+	</style>
+	<link type="text/css" rel="stylesheet" href="default.css" >
+    <script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="garden.js" ></script>
+    <script type="text/javascript" src="functions.js" ></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* We met in an unusual way.</span><br />
+				<span class="space"/><span class="comments">* Thus, I wrote the following code in memory of our story.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Xiao Bai"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Xiao Pang</span>);<br />
+				<span class="comments">// May 29 2019,Our first date. </span><br />
+				i.met(u);<br />
+				<span class="comments">// I found that you're the girl I'm looking for. </span><br />
+				i.girl = u;<br />
+				<span class="comments">// Your happiness is my greatest happiness. </span><br />
+				i.happy = u.happy;<br />
+				<span class="comments">// But our age gap is too big. </span><br />
+				u.age + 11 = i.age;<br />
+				<span class="comments">// Although I seldom mention this, I am worried about it. </span><br />
+				<span class="comments">// But please believe that I really love you and deeply love you.</span><br />
+				in_array(u,i.heart) = true;<br/>
+				i.swear = 'The rest of life is you.';<br/>
+				<span class="comments">// I'm sure we'll have a wonderful wedding
+
+.</span><br />
+
+				i.marry(u);<br />
+				i.liveHappilyWith(u);<br />
+				<span class="comments">// Please trust me.
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Xiao Pang, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Xiao Bai</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright @ 2013 cloudwhite 备案号：京ICP备17049906号
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2019, 4, 29);
+		together.setHours(10);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
